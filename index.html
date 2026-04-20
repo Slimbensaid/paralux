@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slim | Digital Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .gradient-text { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center glass rounded-full px-6 py-2">
+            <span class="text-xl font-bold gradient-text">SLIM.</span>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="#about" class="hover:text-sky-400 transition">À propos</a>
+                <a href="#stack" class="hover:text-sky-400 transition">Stack</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Projets</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-3xl text-center">
+            <div class="mb-6 inline-block px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20">
+                Disponible pour de nouveaux projets 🚀
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Architecte <span class="gradient-text">Self-Hosting</span> & Passionné d'IA
+            </h1>
+            <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
+                Je construis des systèmes automatisés, je dompte les LLM locaux et je transforme des serveurs Unraid en véritables centres de commande.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="px-8 py-3 bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-xl transition shadow-lg shadow-sky-500/20">
+                    Voir mes projets
+                </a>
+                <a href="https://github.com/Slimbensaid" target="_blank" class="px-8 py-3 glass hover:bg-slate-800 text-white font-bold rounded-xl transition flex items-center justify-center gap-2">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative glass rounded-2xl p-2">
+                    <div class="bg-slate-800 rounded-xl h-64 flex items-center justify-center text-slate-500">
+                        <i class="fas fa-user-astronaut text-6xl"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-6">À propos</h2>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    Passionné par l'infrastructure personnelle et le <strong>Vibe Coding</strong>, je m'efforce de créer des ponts entre le hardware robuste et l'intelligence artificielle. Mon terrain de jeu ? Un serveur Unraid, des containers Docker et des modèles LLM locaux.
+                </p>
+                <p class="text-slate-400 leading-relaxed">
+                    Mon objectif est l'autonomie numérique totale : automatiser tout ce qui peut l'être, optimiser chaque cycle CPU et explorer les frontières des agents IA autonomes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Section -->
+    <section id="stack" class="py-24 px-6 bg-slate-900/50">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-16">Ma Stack Technique</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass p-6 rounded-2xl hover:border-sky-500/50 transition group">
+                    <i class="fas fa-server text-3xl text-sky-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold">Unraid</h3>
+                    <p class="text-xs text-slate-500 mt-2">Gestion NAS & VM</p>
+                </div>
+                <div class="glass p-6 rounded-2xl hover:border-sky-500/50 transition group">
+                    <i class="fab fa-docker text-3xl text-sky-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold">Docker</h3>
+                    <p class="text-xs text-slate-500 mt-2">Conteneurisation</p>
+                </div>
+                <div class="glass p-6 rounded-2xl hover:border-sky-500/50 transition group">
+                    <i class="fas fa-brain text-3xl text-sky-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold">Local LLM</h3>
+                    <p class="text-xs text-slate-500 mt-2">Ollama / Llama.cpp</p>
+                </div>
+                <div class="glass p-6 rounded-2xl hover:border-sky-500/50 transition group">
+                    <i class="fab fa-python text-3xl text-sky-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold">Python</h3>
+                    <p class="text-xs text-slate-500 mt-2">Automatisation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 text-center">Projets Récents</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass p-8 rounded-3xl hover:bg-slate-800/50 transition group">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold group-hover:text-sky-400 transition">M3U to Jellyfin</h3>
+                        <a href="https://github.com/Slimbensaid/m3u-to-jellyfin" target="_blank" class="text-slate-500 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Outil d'automatisation pour synchroniser les listes de lecture M3U vers un serveur Jellyfin.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] px-2 py-1 rounded bg-slate-700 text-slate-300">Python</span>
+                        <span class="text-[10px] px-2 py-1 rounded bg-slate-700 text-slate-300">API</span>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl hover:bg-slate-800/50 transition group">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold group-hover:text-sky-400 transition">Hermes Agent Gateway</h3>
+                        <a href="#" class="text-slate-500 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Infrastructure de passerelle pour orchestrer des agents IA autonomes sur VM Ubuntu.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] px-2 py-1 rounded bg-slate-700 text-slate-300">Systemd</span>
+                        <span class="text-[10px] px-2 py-1 rounded bg-slate-700 text-slate-300">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-slate-800 text-center">
+        <p class="text-slate-500 text-sm">
+            &copy; 2026 Slim. Propulsé par Hermes Agent & Tailwind CSS.
+        </p>
+    </footer>
+
+</body>
+</html>
