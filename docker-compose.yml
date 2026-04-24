@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: paralux-db
+    restart: always
+    environment:
+      POSTGRES_USER: paralux_user
+      POSTGRES_PASSWORD: paralux_password
+      POSTGRES_DB: paralux_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: paralux-backend
+    restart: always
+    ports:
+      - "4000:4000"
+    environment:
+      DATABASE_URL: postgresql://paralux_user:paralux_password@db:5432/paralux_db
+      PORT: 4000
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: paralux-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:4000
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
