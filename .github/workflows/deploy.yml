@@ -27,12 +27,16 @@ jobs:
       - name: Install dependencies
         run: |
           cd frontend
-          npm ci
+          npm install
 
       - name: Build with Next.js
         run: |
           cd frontend
           npm run build
+
+      - name: Verify build output
+        run: |
+          ls -R frontend/out || (echo "Error: frontend/out directory not found" && exit 1)
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
